@@ -1,0 +1,32 @@
+@mixin fluid-text($max: 55, $min: 13) {
+    font-size: clamp(#{$min}px, #{calc($max / 1440 * 100)}vw, #{$max}px);
+}
+
+@mixin flex-set-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex-set-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin big-title{
+    color: $dark;
+    @include fluid-text(48, 35);
+    font-weight: 700;
+    line-height: 46px;
+}
+
+@mixin subtitle {
+    color: rgb(126, 126, 126);
+    @include fluid-text(18, 16);
+    font-weight: 500;
+    line-height: 32.4px;
+}
+@mixin border-dashed {
+    border: 3px solid $lait-gray;
+    border-style: dashed;
+}
