@@ -19,6 +19,12 @@
     font-weight: 700;
     line-height: 46px;
 }
+@mixin small-title{
+    color: $dark;
+    @include fluid-text (32, 25);
+    font-weight: 700;
+    line-height: 44.8px;
+}
 
 @mixin subtitle {
     color: rgb(126, 126, 126);
@@ -26,7 +32,26 @@
     font-weight: 500;
     line-height: 32.4px;
 }
-@mixin border-dashed {
-    border: 3px solid $lait-gray;
-    border-style: dashed;
+@mixin size-list-title {
+    display: block;
+    color: $dark;
+    @include fluid-text(20, 16);
+    font-weight: 700;
+    line-height: 28px;
 }
+
+@mixin size-text {
+    color: $lait-sizeGrey;
+    @include fluid-text(16, 14);
+    font-weight: 500;
+    line-height: 28.8px;
+}
+
+@mixin size-min-ttile {
+    color: $dark;
+    @include fluid-text(24, 20);
+    font-weight: 700;
+    line-height: 33.6px;
+    margin: 0;
+}
+

@@ -2,13 +2,38 @@
 <html lang="en">
 
 <head>
+    <meta name="description" content="Online store for printing designs on clothes">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/accordion.min.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 
+    <style>
+        .templates__block_image-one {
+            background-image: url('./images/dist/style1.jpg');
+            background-image: -webkit-image-set(url('./images/dist/style1.webp'), url('./images/dist/style1.jpg'));
+            background-image: -ms-image-set(url('./images/dist/style1.webp'), url('./images/dist/style1.jpg'));
+            background-image: image-set(url('./images/dist/style1.webp'));
+        }
+
+        .templates__block_image-two {
+            background-image: url('./images/dist/style2.jpg');
+            background-image: -webkit-image-set(url('./images/dist/style2.webp'), url('./images/dist/style2.jpg'));
+            background-image: -ms-image-set(url('./images/dist/style2.webp'), url('./images/dist/style2.jpg'));
+            background-image: image-set(url('./images/dist/style2.webp'));
+        }
+
+        .tee-space__booking {
+            background-image: url('./images/dist/banner-costom.jpg');
+            background-image: -webkit-image-set(url('./images/dist/banner-costom.webp'), url('./images/dist/banner-costom.jpg'));
+            background-image: -ms-image-set(url('./images/dist/banner-costom.webp'), url('./images/dist/banner-costom.jpg'));
+            background-image: image-set(url('./images/dist/banner-costom.webp'));
+        }
+    </style>
+
     <title>shop</title>
+
 </head>
 
 <body>
@@ -18,9 +43,11 @@
                 <p class="header__price">
                     Free shipping on all U.S. orders $50+
                 </p>
+                <!-- =================================================================================================== -->
                 <button class="header__btn">
                     <a href="#">Shop Now</a>
                 </button>
+                <!-- =================================================================================================== -->
                 <picture class="header__logo header__logo_visible-768">
                     <source srcset="./images/dist/logo.webp" type="image/webp">
                     <img src="./images/dist/logo.jpg" alt="TeeSpace">
@@ -157,14 +184,17 @@
                         What's more, we do it right! A full administration printing background.
                         Print shirts for yourself or your online business
                     </p>
+
+                    <!-- =================================================================================================== -->
                     <div class="printing__inner-btn">
-                        <button class="printing__button printing__button_green button noHover">
+                        <button class="printing__button button noHover">
                             <a href="#">Shop Now</a>
                         </button>
-                        <button class="printing__button printing__button_white button noHover">
+                        <button class="printing__button-white button noHover">
                             <a href="#">How We Work<span></span></a>
                         </button>
                     </div>
+                    <!-- =================================================================================================== -->
                     <div class="printing__inner-statistics">
                         <div class="printing__collections">
                             <p>4k+</p>
@@ -294,7 +324,9 @@
                         Lorem ipsum det, cowec tetur duis necgi det, consec t
                         eturlagix adipiscing eliet, cowec tetopak
                     </p>
+                    <!-- =================================================================================================== -->
                     <button class="ideas__btn button noHover"><a href="#">Get Started</a></button>
+                    <!-- =================================================================================================== -->
                 </div>
             </div>
         </section>
@@ -334,116 +366,375 @@
                 </div>
             </div>
         </section>
+
         <section class="collection">
             <div class="collection__container container">
-                <h2></h2>
-                <p></p>
-                <div class="collection__wrapper">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                <div class="collection__inner">
+                    <h2>Our picks for you</h2>
+                    <p>
+                        Lorem ipsum det, cowec tetuec tetur duis necgi duis necgi det, consec eturlagix
+                        adipiscing eliet, cowec tetopak
+                    </p>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-container-card">
                                 <picture>
                                     <source srcset="./images/dist/child4.webp" type="image/webp">
                                     <img src="./images/dist/child4.jpg" alt="child T-shirts">
                                 </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child3.webp" type="image/webp">
-                                    <img src="./images/dist/child3.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child2.webp" type="image/webp">
-                                    <img src="./images/dist/child2.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child1.webp" type="image/webp">
-                                    <img src="./images/dist/child1.jpg" alt="child T-shirts">
-                                </picture>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source srcset="./images/dist/child3.webp" type="image/webp">
-                                    <img src="./images/dist/child3.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child3.webp" type="image/webp">
-                                    <img src="./images/dist/child3.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child3.webp" type="image/webp">
-                                    <img src="./images/dist/child3.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child3.webp" type="image/webp">
-                                    <img src="./images/dist/child3.jpg" alt="child T-shirts">
-                                </picture>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source srcset="./images/dist/child2.webp" type="image/webp">
-                                    <img src="./images/dist/child2.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child2.webp" type="image/webp">
-                                    <img src="./images/dist/child2.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child2.webp" type="image/webp">
-                                    <img src="./images/dist/child2.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child2.webp" type="image/webp">
-                                    <img src="./images/dist/child2.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child2.webp" type="image/webp">
-                                    <img src="./images/dist/child2.jpg" alt="child T-shirts">
-                                </picture>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source srcset="./images/dist/child4.webp" type="image/webp">
-                                    <img src="./images/dist/child4.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child3.webp" type="image/webp">
-                                    <img src="./images/dist/child3.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child2.webp" type="image/webp">
-                                    <img src="./images/dist/child2.jpg" alt="child T-shirts">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/child1.webp" type="image/webp">
-                                    <img src="./images/dist/child1.jpg" alt="child T-shirts">
-                                </picture>
+                                <div class="swiper-desc swiper-desc_green-size">
+                                    <h4>Premium Crewneck Sweatshirt</h4>
+                                    <p>$29.00 - <span>$39.00</span></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-pagination"></div>
-
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-slide">
+                            <div class="swiper-container-card">
+                                <picture>
+                                    <source srcset="./images/dist/child3.webp" type="image/webp">
+                                    <img src="./images/dist/child3.jpg" alt="child T-shirts">
+                                </picture>
+                                <div class="swiper-desc">
+                                    <h4>Midweight Cotton Tee</h4>
+                                    <p>$29.00 - <span>$39.00</span></p>
+                                </div>
+                                <div class="color__inner">
+                                    <div><span></span></div>
+                                    <div><span class="color-dark"></span></div>
+                                    <a href="#">+3</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-container-card">
+                                <picture>
+                                    <source srcset="./images/dist/child2.webp" type="image/webp">
+                                    <img src="./images/dist/child2.jpg" alt="child T-shirts">
+                                </picture>
+                                <div class="swiper-desc">
+                                    <h4>Youth Short Sleeve Tee</h4>
+                                    <p>$29.00 - <span>$39.00</span></p>
+                                </div>
+                                <div class="color__inner">
+                                    <div><span></span></div>
+                                    <div><span class="color-dark"></span></div>
+                                    <a href="#">+3</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-container-card">
+                                <picture>
+                                    <source srcset="./images/dist/child1.webp" type="image/webp">
+                                    <img src="./images/dist/child1.jpg" alt="child T-shirts">
+                                </picture>
+                                <div class="swiper-desc">
+                                    <h4>Fine Jersey Tee</h4>
+                                    <p>$29.00 - <span>$39.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-container-card">
+                                <picture>
+                                    <source srcset="./images/dist/child4.webp" type="image/webp">
+                                    <img src="./images/dist/child4.jpg" alt="child T-shirts">
+                                </picture>
+                                <div class="swiper-desc swiper-desc_green-size">
+                                    <h4>Premium Crewneck Sweatshirt</h4>
+                                    <p>$29.00 - <span>$39.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-container-card">
+                                <picture>
+                                    <source srcset="./images/dist/child3.webp" type="image/webp">
+                                    <img src="./images/dist/child3.jpg" alt="child T-shirts">
+                                </picture>
+                                <div class="swiper-desc">
+                                    <h4>Midweight Cotton Tee</h4>
+                                    <p>$29.00 - <span>$39.00</span></p>
+                                </div>
+                                <div class="color__inner">
+                                    <div><span></span></div>
+                                    <div><span class="color-dark"></span></div>
+                                    <a href="#">+3</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-container-card">
+                                <picture>
+                                    <source srcset="./images/dist/child2.webp" type="image/webp">
+                                    <img src="./images/dist/child2.jpg" alt="child T-shirts">
+                                </picture>
+                                <div class="swiper-desc">
+                                    <h4>Youth Short Sleeve Tee</h4>
+                                    <p>$29.00 - <span>$39.00</span></p>
+                                </div>
+                                <div class="color__inner">
+                                    <div><span></span></div>
+                                    <div><span class="color-dark"></span></div>
+                                    <a href="#">+3</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-container-card">
+                                <picture>
+                                    <source srcset="./images/dist/child1.webp" type="image/webp">
+                                    <img src="./images/dist/child1.jpg" alt="child T-shirts">
+                                </picture>
+                                <div class="swiper-desc">
+                                    <h4>Fine Jersey Tee</h4>
+                                    <p>$29.00 - <span>$39.00</span></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-       
+        <section class="templates">
+            <div class="templates__container container">
+                <div class="templates__block templates__block_image-one">
+                    <div class="templates__inner">
+                        <h3>
+                            Thousands of
+                            free templates
+                        </h3>
+                        <p>
+                            Free and easy way to bring
+                            your ideas to life
+                        </p>
+                        <!-- =================================================================================================== -->
+                        <button class="templates__btn button noHover ">
+                            <a href="#">Explore More</a>
+                        </button>
+                        <!-- =================================================================================================== -->
+                    </div>
+                </div>
+                <div class="templates__block templates__block_image-two">
+                    <div class="templates__inner">
+                        <h3>
+                            Create your
+                            unique style
+                        </h3>
+                        <p>
+                            Free and easy way to make
+                            your creative to life
+                        </p>
+                        <!-- =================================================================================================== -->
+                        <button class="templates__btn button noHover">
+                            <a href="#">Shop Now</a>
+                        </button>
+                        <!-- =================================================================================================== -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tee-space">
+            <div class="tee-space__bacround-figur"> </div>
+            <div class="tee-space__wrapper">
+                <div class="tee-space__container container">
+                    <div class="tee-space__block-one">
+                        <h2>
+                            Why customize
+                            products with
+                            TeeSpace?
+                        </h2>
+                        <p>
+                            Lorem ipsum det, cowec tetur duis necgi
+                            det, consec t eturlagix adipiscing eliet
+                            duis necgi det, con
+                        </p>
+                        <!-- =================================================================================================== -->
+                        <button class="tee-space__btn button noHover ">
+                            <a href="#">View All Features</a>
+                        </button>
+                        <!-- =================================================================================================== -->
+                    </div>
+                    <div class="tee-space__block-card">
+                        <ul class="tee-space__list">
+                            <li class="tee-space__list-item">
+                                <img src="./images/dist/Vector-card.svg" alt="icon-dollar">
+                                <h4>
+                                    NO Die & plate
+                                    charges
+                                </h4>
+                                <p>
+                                    Lorem ipsum det, cowec
+                                    tetur duis necgi det, consect
+                                    eturlagix adipiscing eliet duis
+                                    necgi det, con
+                                </p>
+                            </li>
+                            <li class="tee-space__list-item">
+                                <img src="./images/dist/Vector-card2.svg" alt="icon-dollar">
+                                <h4>
+                                    High quality offset
+                                    printing
+                                </h4>
+                                <p>
+                                    Lorem ipsum det, cowec
+                                    tetur duis necgi det, consect
+                                    eturlagix adipiscing eliet duis
+                                    necgi det, con
+                                </p>
+                            </li>
+                            <li class="tee-space__list-item">
+                                <img src="./images/dist/Vector-card3.svg" alt="icon-dollar">
+                                <h4>
+                                    Secure payment
+                                </h4>
+                                <p>
+                                    Lorem ipsum det, cowec
+                                    tetur duis necgi det, consect
+                                    eturlagix adipiscing eliet duis
+                                    necgi det, con
+                                </p>
+                            </li>
+                            <li class="tee-space__list-item">
+                                <img src="./images/dist/Vector-card4.svg" alt="icon-dollar">
+                                <h4>
+                                    Custom size & style
+                                </h4>
+                                <p>
+                                    Lorem ipsum det, cowec
+                                    tetur duis necgi det, consect
+                                    eturlagix adipiscing eliet duis
+                                    necgi det, con
+                                </p>
+                            </li>
+                            <li class="tee-space__list-item">
+                                <img src="./images/dist/Vector-card5.svg" alt="icon-dollar">
+                                <h4>
+                                    Fast & free delivery
+                                </h4>
+                                <p>
+                                    Lorem ipsum det, cowec
+                                    tetur duis necgi det, consect
+                                    eturlagix adipiscing eliet duis
+                                    necgi det, con
+                                </p>
+                            </li>
+                            <li class="tee-space__list-item">
+                                <img src="./images/dist/Vector-card6.svg" alt="icon-dollar">
+                                <h4>
+                                    Low minimum order
+                                    quantity
+                                </h4>
+                                <p>
+                                    Lorem ipsum det, cowec
+                                    tetur duis necgi det, consect
+                                    eturlagix adipiscing eliet duis
+                                    necgi det, con
+                                </p>
+                            </li>
+                        </ul>
+
+                        <div class="tee-space__booking">
+                            <h3>
+                                Create your own
+                                custom products online!
+                            </h3>
+                            <p>
+                                Free and easy way to bring your ideas to life
+                            </p>
+                            <!-- =================================================================================================== -->
+                            <button class="tee-space__btn button noHover">
+                                <a href="#">Order Custom Shirts</a>
+                            </button>
+                            <!-- =================================================================================================== -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources">
+            <div class="resources__container container">
+                <div class="resources__inner">
+                    <h2>
+                        More resources
+                    </h2>
+                    <p>
+                        Lorem ipsum det, cowec tetuec tetur duis necgi duis necgi det, consec eturlagix
+                        adipiscing eliet, cowec tetopak
+                    </p>
+                </div>
+                <div class="resources__wrapper">
+                    <div class="resources__services resources__services_one">
+                        <picture>
+                            <source srcset="./images/dist/cloth1.webp" type="image/webp">
+                            <img src="./images/dist/cloth1.png" alt="printing">
+                        </picture>
+                        <article>
+                            <div class="resources__descr">
+                                <div class="resources__btn-inner">
+                                    <button class="resources__btn">
+                                        <a href="#">Design Services</a>
+                                    </button>
+                                </div>
+                                <h3>
+                                    Make yourself happy with
+                                    our T-shirt customer…
+                                </h3>
+                                <div class="resources__user-inner">
+                                    <img src="./images/dist/user.svg" alt="printing">
+                                    <p>
+                                        by <span>admin</span><br>
+                                        August 20, 2022
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="resources__services resources__services_two">
+                        <picture>
+                            <source srcset="./images/dist/cloth1.webp" type="image/webp">
+                            <img src="./images/dist/cloth1.png" alt="printing">
+                        </picture>
+                        <article>
+                            <div class="resources__descr resources__descr_two">
+                                <div class="resources__btn-inner">
+                                    <button class="resources__btn">
+                                        <a href="#">Design Services</a>
+                                    </button>
+                                    <button class="resources__btn">
+                                        <a href="#">Design Services</a>
+                                    </button>
+                                </div>
+
+                                <h3>
+                                    Are you ready to make it
+                                    awesome with us
+                                </h3>
+                                <div class="resources__user-inner">
+                                    <img src="./images/dist/user.svg" alt="printing">
+                                    <p>
+                                        by <span>admin</span><br>
+                                        August 20, 2022
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate maiores cum consequatur sequi, mollitia, incidunt fugiat natus eaque aliquid quasi harum quas quis totam eius sapiente temporibus quidem, commodi exercitationem neque dolores! Voluptatem laborum libero voluptas ipsam suscipit temporibus labore ullam eaque perspiciatis veniam quam voluptatibus sequi, aspernatur voluptate, cumque in tempore voluptates vitae iusto beatae reiciendis illum omnis delectus sunt. Iste tenetur et quod quo aspernatur non sunt libero accusamus at animi beatae, assumenda harum rerum explicabo sed aliquid veniam laudantium id impedit, deserunt fugiat. Eius amet in voluptatibus tempore natus placeat, nulla beatae sequi, voluptatum, velit similique? Dolor nesciunt molestias, libero perferendis quam nihil enim suscipit in, cum possimus aperiam maxime distinctio! Quos doloribus doloremque optio quo aliquid blanditiis tenetur nihil veniam sunt minima exercitationem quod, quidem eum cumque eos esse illo ea veritatis nesciunt accusantium dolorum laudantium aliquam! Repudiandae, nobis! Asperiores voluptate aut fuga iusto iure qui temporibus tempora debitis fugit velit. Fuga ipsam sunt deleniti, consectetur harum nemo esse autem est debitis laudantium dicta. Qui minus fugiat corporis non, doloremque tempora vitae rerum mollitia fuga error quod, sit cupiditate unde ipsum a at iste odio praesentium possimus reiciendis quae pariatur. Voluptatem soluta corporis asperiores est beatae rem odio vero odit, minus, cupiditate officiis quam. Vitae sed unde excepturi vel aspernatur at sunt iure animi accusantium? Rerum saepe veritatis delectus dolores optio doloremque. Consequatur dolorem placeat, itaque earum in eos sint sed quia sit tempore. Aperiam, nostrum harum. Cum quam eum earum praesentium! Aperiam ea, dolorum maiores ad itaque voluptates culpa quasi alias fugiat animi sequi voluptas ab dolores dolorem cupiditate repellat necessitatibus non deserunt commodi. Facilis reiciendis sed error voluptate, quia cupiditate molestias inventore deleniti repudiandae numquam sapiente suscipit perspiciatis earum dolorum adipisci neque consequatur unde sint optio quisquam similique nobis eos? Repellendus deleniti praesentium blanditiis distinctio sunt nostrum facere nisi facilis id officiis nam, at sequi laboriosam laborum rerum suscipit a incidunt libero quos labore amet dolore ducimus deserunt. Odio similique at voluptates molestias, nemo magni iste excepturi, cumque tenetur mollitia culpa eius natus dolorem laborum porro autem perspiciatis. Expedita natus tempore facere blanditiis in aliquam animi delectus veniam sequi minima tenetur, iure aperiam asperiores inventore nam id consequuntur dolores placeat commodi sint. Harum minus quo molestias accusamus, corporis cupiditate voluptatum quod nam illum porro, ipsa id earum unde. Cum blanditiis ducimus vero? Odio quo quas, eum, doloribus fugiat eveniet mollitia omnis aut officia modi ducimus perspiciatis unde sapiente dignissimos ipsam neque quia magnam possimus molestiae? Velit obcaecati praesentium ratione quam. Reiciendis aperiam necessitatibus perspiciatis rerum sed, officia totam placeat laborum porro praesentium ducimus a architecto ex ipsum laboriosam hic neque fugiat eum adipisci id iure magnam laudantium? Reiciendis numquam odit consequatur quae ad a ex vel temporibus voluptate animi voluptatum voluptatibus officia possimus veniam natus ut cum libero, et pariatur vero repudiandae nemo deleniti laudantium? Consectetur illo rerum tempora, dicta, vel voluptas animi consequuntur quidem aspernatur voluptates deleniti repellat, eos mollitia odit porro omnis. Magni dolorem, eligendi dolor distinctio nulla hic nesciunt perferendis molestias!
     </main>
-
-
-
-    <!-- <div style="background-color: red;
-    height: 50vh;
-    width: 50%;">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique numquam, incidunt, voluptatum quas accusantium suscipit repellat praesentium minus asperiores nobis velit veniam dolor harum, consequatur perferendis ex obcaecati? Mollitia, praesentium adipisci consequatur eos asperiores provident sapiente quis at commodi minus accusamus magnam culpa, voluptatum tenetur! Reiciendis rem dicta magnam quam. Voluptas quidem dicta maiores dolore corporis, provident odio consequatur laboriosam ipsum fugiat itaque eius, fuga molestiae reiciendis deserunt sed? Iste maxime, cumque sint tenetur nesciunt eos a voluptatum laboriosam distinctio provident? Accusantium odio quam aperiam rem quasi voluptates error molestias iure delectus iusto eos consectetur, velit aspernatur nam totam nisi nostrum vel consequatur qui! Ad vitae culpa praesentium blanditiis expedita quod sed quis reiciendis, omnis fugiat in, debitis officia dicta ratione recusandae! Autem dicta ab ipsa, fuga distinctio vitae quo officiis dolorum reprehenderit nam alias dolores similique, culpa quod atque praesentium porro, cupiditate nulla reiciendis iusto voluptatem. Veritatis voluptate ea, dicta minus vero odio cupiditate cum quam expedita eveniet quidem corrupti, eum quia sed harum labore nostrum, consequatur excepturi consequuntur deleniti recusandae vel molestias! Possimus dignissimos asperiores architecto voluptatum delectus nihil corporis nostrum! Nemo voluptates saepe velit laborum enim sed maiores, quo, expedita voluptas ea non dicta. Asperiores, nihil magni repudiandae in reiciendis maxime voluptatibus quis. Ducimus nemo quaerat praesentium recusandae architecto aut itaque numquam, perferendis aspernatur minima natus harum sit at tempora vitae, laborum fuga. Consequatur praesentium eaque ab quis fuga saepe, vitae reprehenderit sit fugiat asperiores, mollitia amet beatae voluptas. Est, modi! At aperiam soluta ducimus in facere!
-        
-    </div> -->
-
-
-
     <script src="https://kit.fontawesome.com/1eab04d91e.js" crossorigin="anonymous"></script>
     <script src="js/accordion.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
+    <!-- <script src="js/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 
