@@ -663,12 +663,11 @@ html {
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .swiper-slide img {
@@ -677,6 +676,36 @@ html {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+}
+
+.swiper-desc {
+    &_green-size {
+        color: $green-color;
+    }
+
+    h4 {
+        color: $dark;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25.2px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 28.8px;
+        text-align: center;
+
+        span {
+            color: $lait-gray-visible;
+            font-size: 13.6px;
+            font-weight: 500;
+            line-height: 24.48px;
+            text-align: center;
+            text-decoration-line: line-through;
+        }
+    }
 }
 
 .color__inner {
@@ -915,16 +944,13 @@ html {
 
     &__services {
         position: relative;
-        max-width: 644px;
         display: flex;
         gap: 30px;
-
-        img {
-            max-width: 310px;
-        }
     }
 
     &__descr {
+        max-width: 330px;
+
         h3 {
             @include size-min-ttile;
             margin: 16px 0 22px 0;
@@ -977,6 +1003,212 @@ html {
     }
 }
 
+.user-comments {
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            @include big-title;
+            line-height: 60px;
+            margin: 35px 0 20px 0;
+        }
+
+        p {
+            @include subtitle;
+        }
+    }
+
+    &__avatar {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        img {
+            max-width: 80px;
+            width: 100%;
+            margin-right: 24px;
+        }
+
+        p {
+            margin: 11px 5px 0 0;
+            @include subtitle;
+
+            span {
+                color: $dark;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 25.2px;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+    }
+}
+
+.mySwiper-two {
+    margin: 69px 0 100px 0;
+}
+
+.swiper-wrapper {
+    &_flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.swiper-slide_two {
+    padding-bottom: 80px;
+}
+
+.swiper-user-card {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+    padding: 49px 60px 46px 40px;
+    margin: 5px;
+
+    &>p {
+        color: $dark;
+        @include fluid-text(20, 16);
+        font-weight: 500;
+        line-height: 36px;
+        text-align: start;
+    }
+}
+
+.swiper-pagination {
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+
+
+.movement {
+    position: relative;
+    background-color: rgba(180, 121, 217, 0.15);
+    overflow: hidden;
+
+    &__img-inner {
+        position: absolute;
+        z-index: 2;
+
+        &_one {
+            top: -47px;
+            left: 80px;
+        }
+
+        &_two {
+            bottom: 81px;
+            left: -33px;
+        }
+
+        &_free {
+            bottom: 43px;
+            left: 403px;
+        }
+
+        &_four {
+            bottom: 0;
+            right: 308px;
+        }
+
+        &_five {
+            top: 162px;
+            right: -20px;
+        }
+
+        &_six {
+            top: -35px;
+            right: 288px;
+        }
+    }
+
+    &__container {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        h2 {
+            @include big-title;
+            line-height: 60px;
+            text-align: center;
+            max-width: 42%;
+            margin-top: 130px;
+        }
+
+        p {
+            @include subtitle;
+        }
+    }
+
+    &__button {
+        padding-bottom: 150px;
+
+        button {
+            padding: 0;
+            border: none;
+
+            span {
+                background-color: $white;
+
+            }
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 25px;
+            color: $white;
+        }
+    }
+
+    &__btn {
+        &:last-child {
+            margin-left: 20px;
+        }
+
+        &_white {
+            background-color: $white;
+
+            a {
+                color: $dark;
+            }
+        }
+    }
+}
+
+.social {
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 32px 0;
+        background-color: $white;
+
+        a {
+            color: $dark;
+           @include fluid-text(18,16);
+            font-weight: 700;
+            line-height: 32.4px;
+            transition: .1s;
+            &:hover{
+                border-bottom: 4px solid $green-color;
+            }
+        }
+    }
+}
+
+
+
+
+
 
 
 
@@ -1012,6 +1244,24 @@ html {
         justify-content: center;
         gap: 30px;
     }
+
+    // ============movement=====================
+    .movement {
+        &__img-inner_free {
+            display: none;
+        }
+
+        &__img-inner_four {
+            bottom: -41px;
+            right: 308px;
+        }
+
+        &__img-inner_six {
+            top: -51px;
+            right: 288px;
+        }
+    }
+
 }
 
 @media screen and (max-width:$laptop-l) {
@@ -1036,6 +1286,12 @@ html {
         position: static;
         width: 100%;
         padding: 30px 10px 30px 30px;
+    }
+
+    // ============movement=====================
+    .movement__img-inner_one {
+        top: -47px;
+        left: 16px;
     }
 
 }
@@ -1414,8 +1670,8 @@ html {
         }
     }
 
-    .resources__inner{
-        h2{
+    .resources__inner {
+        h2 {
             margin-top: 40px;
         }
     }
@@ -1425,8 +1681,53 @@ html {
             max-width: 90%;
         }
     }
-    .resources__wrapper{
+
+    .resources__wrapper {
         gap: 50px;
+    }
+
+    // =================swiper-user-car===============
+    .swiper-user-card {
+        max-width: 80%;
+    }
+
+    .mySwiper-two {
+        margin: 40px 0 120px 0;
+    }
+
+    .swiper-user-card {
+        padding: 35px;
+    }
+
+    // ===========================movement======================
+    .movement {
+        &__container {
+            h2 {
+                max-width: 80%;
+            }
+        }
+
+        &__img-inner_one {
+            display: none;
+        }
+
+        &__img-inner_two {
+            bottom: 0;
+            left: 0;
+        }
+
+        &__img-inner_four {
+            display: none;
+        }
+
+        &__img-inner_five {
+            top: 0;
+            right: 0;
+        }
+
+        &__img-inner_six {
+            display: none;
+        }
     }
 }
 
@@ -1460,6 +1761,11 @@ html {
         p {
             max-width: 90%;
         }
+    }
+
+    // ==========swiper-user-car===============
+    .swiper-user-card {
+        max-width: 90%;
     }
 }
 
