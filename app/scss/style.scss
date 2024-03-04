@@ -25,7 +25,7 @@ html {
         padding: 0 10px;
         max-width: $container-width;
         width: 100%;
-        height: 60px;
+        height: 41px;
         margin: auto;
         @include flex-set-center;
         gap: 20px;
@@ -109,7 +109,7 @@ html {
             top: calc(50% - 1px);
             left: 0%;
             width: 100%;
-            height: 2px;
+            height: 3px;
             background-color: $dark;
             border-radius: 10px;
             transition: all 0.5s;
@@ -144,6 +144,78 @@ html {
             font-weight: 700;
         }
     }
+
+    &__search-inner {
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.search {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: $white;
+    border-radius: 50px;
+    transition: 0.5s;
+    overflow: hidden;
+
+    &__input {
+        position: relative;
+        width: 220px;
+        height: 50px;
+        left: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 5px 10px 5px 25px;
+        color: $lait-sizeGrey;
+    }
+
+    &__clear {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before,
+        &::after{
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 15px;
+            background-color: $lait-sizeGrey;
+            transform: rotate(315deg);
+
+        }
+        &::after{
+            transform: rotate(-315deg);
+        }
+    }
+}
+
+.fa-solid {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    padding: 10px;
+}
+
+.active {
+    width: 270px;
 }
 
 .menu {
@@ -196,13 +268,6 @@ html {
     }
 }
 
-.serch {
-    &__text {
-        width: 0;
-        opacity: 0;
-    }
-}
-
 .number {
 
     & p {
@@ -227,6 +292,7 @@ html {
     max-width: $container-width;
     margin: auto;
     padding: 0 10px;
+    overflow: hidden;
 }
 
 .button {
@@ -660,6 +726,7 @@ html {
 .swiper {
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 
 .swiper-slide {
@@ -915,7 +982,6 @@ html {
 }
 
 .resources {
-    &__container {}
 
     &__inner {
         display: flex;
@@ -1087,7 +1153,6 @@ html {
 }
 
 
-
 .movement {
     position: relative;
     background-color: rgba(180, 121, 217, 0.15);
@@ -1150,35 +1215,54 @@ html {
     }
 
     &__button {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
         padding-bottom: 150px;
 
         button {
             padding: 0;
             border: none;
-
-            span {
-                background-color: $white;
-
-            }
-        }
-
-        a {
-            display: inline-block;
-            padding: 15px 25px;
-            color: $white;
         }
     }
 
     &__btn {
-        &:last-child {
-            margin-left: 20px;
+        position: relative;
+
+        a {
+            display: inline-block;
+            padding: 15px 50px 15px 25px;
+            color: $white;
+
+            &::after {
+                content: url('../images/dist/Vector-hite-row.svg');
+                position: absolute;
+                top: 40%;
+                right: 25px;
+            }
+
+            &:hover {
+                background-color: $dark-green ;
+                border-radius: 12px;
+            }
         }
 
         &_white {
+            position: relative;
             background-color: $white;
 
             a {
                 color: $dark;
+
+                &::after {
+                    content: url('../images/dist/Vector-black-row.svg');
+                    top: 30%;
+                }
+
+                &:hover {
+                    background-color: $pink;
+                }
             }
         }
     }
@@ -1194,17 +1278,107 @@ html {
 
         a {
             color: $dark;
-           @include fluid-text(18,16);
+            @include fluid-text(18, 16);
             font-weight: 700;
             line-height: 32.4px;
             transition: .1s;
-            &:hover{
+            padding: 0 10px;
+
+            &:hover {
                 border-bottom: 4px solid $green-color;
             }
         }
     }
 }
 
+.footer {
+    background-color: $yltra-light-gray;
+
+    &__wrapper {
+        padding: 82px 0 57px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__list-item {
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+        max-width: 325px;
+        width: 100%;
+
+        img {
+            max-width: 150px
+        }
+
+        p {
+            @include size-text;
+        }
+
+        a {
+            color: $lait-sizeGrey;
+            @include fluid-text(18, 16);
+            font-weight: 500;
+            line-height: 28.8px;
+        }
+
+        span {
+            @include size-list-title;
+        }
+    }
+
+
+    &__form {
+        position: relative;
+        max-width: 330px;
+        width: 100%;
+        border-radius: 12px;
+        background-color: $white;
+
+        input {
+            outline: none;
+            max-width: 80%;
+            width: 100%;
+            padding: 15px 21px;
+            border: none;
+            border-radius: 12px;
+            color: $lait-sizeGrey;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 8px;
+        right: -1px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        padding: 15px 20px 15px 15px;
+        cursor: pointer;
+    }
+
+    .footer__payment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 92px;
+    }
+
+    .footer__rights {
+        p {
+            color: $lait-sizeGrey;
+            @include fluid-text(18, 16);
+            font-weight: 500;
+            line-height: 28.8px;
+        }
+    }
+}
 
 
 
@@ -1356,7 +1530,7 @@ html {
         transform: translateY(0%);
         transition: all 1s;
 
-        span {
+        &>span {
             transform: scale(0);
 
             &:first-child {
@@ -1473,6 +1647,7 @@ html {
     .tee-space__block-one {
         max-width: 100%;
         padding-left: 40px;
+        margin-top: 0;
     }
 
     .tee-space__list {
@@ -1654,7 +1829,6 @@ html {
         }
     }
 
-    // ================TEE-SPACE==============================
     .tee-space__list {
         gap: 15px;
         grid-template-columns: repeat(2, 0.5fr);

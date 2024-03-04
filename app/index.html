@@ -32,8 +32,49 @@
         }
     </style>
 
-    <title>shop</title>
+    <style>
+        input::-webkit-input-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
 
+        input::-moz-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        input:-moz-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        input:-ms-input-placeholder {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        input:focus::-webkit-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        input:focus::-moz-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        input:focus:-moz-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        input:focus:-ms-input-placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+
+    <title>shop</title>
 </head>
 
 <body>
@@ -136,11 +177,16 @@
                         </li>
                     </ul>
 
-                    <div class="header__serch secrch">
-                        <input type="text" class="serch__text" placeholder="Serch...">
-                        <a href="#" class="serch__btn">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
+                    <div class="header__search-inner">
+                        <div class="header__search search">
+                            <div class="search__icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="search__input">
+                                <input type="text" placeholder="Search" id="mysearch">
+                                <span class="search__clear"></span>
+                            </div>
+                        </div>
                     </div>
                 </nav>
 
@@ -217,7 +263,7 @@
         </section>
 
         <section class="brand">
-            <div class="brand__container container">
+            <div class="brand__container container anim-items">
                 <h2>
                     “We've got custom T-shirts in a range of fits and sizes, so <br>
                     everyone can wear your brand or message.”
@@ -261,7 +307,7 @@
                     </p>
                 </div>
 
-                <div class="create__section-desc">
+                <div class="create__section-desc anim1">
                     <picture>
                         <source srcset="./images/dist/Main-one.webp" type="image/webp">
                         <img src="./images/dist/Main-one.png" alt="hopin">
@@ -276,7 +322,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="create__section-desc create__section-desc_two">
+                <div class="create__section-desc create__section-desc_two anim2">
                     <picture>
                         <source srcset="./images/dist/Main-two.webp" type="image/webp">
                         <img src="./images/dist/Main-two.png" alt="hopin">
@@ -291,7 +337,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="create__section-desc">
+                <div class="create__section-desc anim3">
                     <picture>
                         <source srcset="./images/dist/Main-free.webp" type="image/webp">
                         <img src="./images/dist/Main-free.png" alt="hopin">
@@ -311,10 +357,13 @@
 
         <section class="ideas">
             <div class="ideas__container container">
-                <picture>
-                    <source srcset="./images/dist/miniature.webp" type="image/webp">
-                    <img src="./images/dist/miniature.png" alt="hopin">
-                </picture>
+                <div class="ideas__img-inner">
+                    <picture>
+                        <source srcset="./images/dist/miniature.webp" type="image/webp">
+                        <img src="./images/dist/miniature.png" alt="hopin">
+                    </picture>
+                </div>
+                
                 <div class="ideas__inner">
                     <h2>
                         Free and easy way to
@@ -560,8 +609,9 @@
                         <!-- =================================================================================================== -->
                     </div>
                     <div class="tee-space__block-card">
+                       
                         <ul class="tee-space__list">
-                            <li class="tee-space__list-item">
+                            <li class="tee-space__list-item tee-space__list-item_anim">
                                 <img src="./images/dist/Vector-card.svg" alt="icon-dollar">
                                 <h4>
                                     NO Die & plate
@@ -574,7 +624,7 @@
                                     necgi det, con
                                 </p>
                             </li>
-                            <li class="tee-space__list-item">
+                            <li class="tee-space__list-item tee-space__list-item_anim">
                                 <img src="./images/dist/Vector-card2.svg" alt="icon-dollar">
                                 <h4>
                                     High quality offset
@@ -587,7 +637,7 @@
                                     necgi det, con
                                 </p>
                             </li>
-                            <li class="tee-space__list-item">
+                            <li class="tee-space__list-item tee-space__list-item_anim">
                                 <img src="./images/dist/Vector-card3.svg" alt="icon-dollar">
                                 <h4>
                                     Secure payment
@@ -623,7 +673,7 @@
                                     necgi det, con
                                 </p>
                             </li>
-                            <li class="tee-space__list-item">
+                            <li class="tee-space__list-item tee-space__list-item_anim-botton">
                                 <img src="./images/dist/Vector-card6.svg" alt="icon-dollar">
                                 <h4>
                                     Low minimum order
@@ -844,9 +894,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination">
 
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
@@ -912,54 +961,85 @@
 
         <section class="social">
             <div class="social__container container noHover">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-                <a href="#">Youtube</a>
-                <a href="#">Pinterest</a>
+                <a class="social__link" href="#">Facebook</a>
+                <a class="social__link" href="#">Twitter</a>
+                <a class="social__link" href="#">Instagram</a>
+                <a class="social__link" href="#">Youtube</a>
+                <a class="social__link" href="#">Pinterest</a>
             </div>
         </section>
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non corporis provident possimus fugiat a hic doloribus
-        aspernatur molestiae. Ab aspernatur voluptatibus similique nihil deserunt, voluptate et quas assumenda eos, non
-        fuga tempore. Atque amet sed fugit soluta tenetur iste deserunt eius blanditiis voluptas culpa eos voluptate
-        provident ex deleniti repellat eveniet necessitatibus, ducimus error earum! Eius aspernatur accusantium iure
-        repellendus sapiente a corrupti, est consectetur voluptatem, laborum alias eveniet ea, ipsum deserunt similique
-        dignissimos soluta aperiam aliquam laudantium at molestiae architecto velit iusto ab? Reprehenderit quis
-        deleniti, et dolorem blanditiis nam voluptatem a doloribus, aperiam repellat illum atque libero. Velit assumenda
-        eligendi eius commodi recusandae reiciendis quas placeat labore rerum aspernatur impedit, perferendis aut harum
-        esse sunt repellendus omnis cum voluptatum fuga non veniam! Deserunt nihil quod ipsum sequi assumenda, libero
-        optio aut cum error, dolorum impedit cumque quibusdam necessitatibus. Aspernatur et autem voluptatum maiores
-        dignissimos? Vero veritatis corporis nihil aperiam. Odio sed neque reprehenderit consectetur perferendis, soluta
-        nihil quaerat dolores laborum. Doloremque, debitis vero illo eveniet quas voluptatibus, voluptate neque
-        assumenda odit nemo possimus, laboriosam consequuntur quod temporibus! Sunt nostrum quaerat animi. Saepe
-        asperiores quos placeat pariatur tempora laudantium. Quis itaque temporibus est iste rem unde cumque, inventore,
-        ipsum consectetur doloribus minima quasi, ducimus quo non placeat? Facilis maiores sequi quod, odit rem vero
-        modi molestias fuga alias vitae esse! Voluptatum eaque quia sed ex obcaecati atque at nisi tempora nam voluptas
-        id blanditiis provident labore soluta ut, veritatis dolores voluptatibus consequatur, ipsa nemo, expedita
-        ducimus asperiores. Cumque officia accusantium obcaecati dolorem a exercitationem, minus ratione? Nisi,
-        asperiores incidunt alias illo nulla itaque in laboriosam fuga quam ex reiciendis cum iste nam, iusto nihil ut
-        praesentium blanditiis voluptate velit ipsa culpa sit. Odio eaque perspiciatis sequi harum enim aliquid dolorem
-        nihil cum at omnis, modi quaerat, vitae dolore nesciunt repellat. Autem fugit tenetur id voluptates deleniti
-        delectus consequatur temporibus, ullam molestias! Iusto possimus, quasi hic reiciendis quos omnis esse, fuga
-        placeat beatae pariatur rem suscipit tempore commodi repellat alias neque iure obcaecati perferendis ipsum quas!
-        Minus at dolore provident. Aliquid rem, sint consectetur totam asperiores temporibus fugit quas eius pariatur
-        consequuntur quisquam? Incidunt pariatur consequuntur accusamus odit vero unde laudantium cupiditate, dicta
-        dolor! Quae, dolor placeat quos, exercitationem harum ex molestiae repudiandae incidunt expedita eveniet iusto
-        impedit architecto, quaerat mollitia voluptates nisi! Ut unde libero quos corrupti debitis porro sequi, a vel,
-        corporis, atque esse harum temporibus perspiciatis? Vitae reprehenderit dolores dolor nostrum quos harum.
-        Laborum nulla facilis, saepe, repellat optio tempora sapiente labore minima voluptates, quod quia dolorum quos
-        est sint omnis eaque porro possimus. Iste accusantium veniam tenetur! Rerum, pariatur cumque eligendi id quod
-        aliquid architecto iure quo vel eius tempora. Unde labore accusantium dolorum veniam. Voluptatem eos, ut
-        molestias inventore corporis deleniti. Odio maxime provident obcaecati laudantium sit nostrum nemo cum dolore.
-        Unde, eligendi alias. Doloribus aut consectetur suscipit. Molestiae tempora repellat hic eligendi necessitatibus
-        sed! Consequuntur necessitatibus ad labore? Rem, iure qui! Quaerat iste repudiandae eligendi qui pariatur
-        voluptates, vel libero ab debitis! Aut, quidem!
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__wrapper">
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <picture>
+                                <source srcset="./images/dist/logo.webp" type="image/webp">
+                                <img src="./images/dist/logo.jpg" alt="TeeSpace">
+                            </picture>
+                            <a href="mailto:hello@teespace.io">hello@teespace.io</a>
+                            <a href="tel:+020360383996"><span>+02 036 038 3996</span></a>
+                            <p>
+                                3665 Paseo Place, Suite 0960 <br>
+                                San Diego
+                            </p>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#"><span>Information</span></a>
+                            <a href="#">About us</a>
+                            <a href="#">Our Blog</a>
+                            <a href="#">Start a Return</a>
+                            <a href="#">Contact Us</a>
+                            <a href="#">Shipping FAQ</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#"><span>Useful links</span></a>
+                            <a href="#">My Account</a>
+                            <a href="#">Print Provider</a>
+                            <a href="#">Become a Partner</a>
+                            <a href="#">Custom Products</a>
+                            <a href="#">Make your own shirt</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#"><span>Newsletter</span></a>
+                            <a href="#">Get the latest news, events & more delivered
+                                to your inbox.
+                            </a>
+                            <div class="footer__form">
+                                <form action="#" id="form">
+                                    <input id="formEmail" type="email" name="email" placeholder="Your email">
+
+                                    <button type="submit" class="footer__button">
+                                        <img src="../images/dist/Vector-black-row.svg" alt="#">
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="footer__payment">
+                        <picture>
+                            <source srcset="./images/dist/footer-payment.webp" type="image/webp">
+                            <img src="./images/dist/footer-payment.jpg" alt="payment">
+                        </picture>
+                        <div class="footer__rights">
+                            <p>
+                                © 2022 TeeSpace. All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
     <script src="https://kit.fontawesome.com/1eab04d91e.js" crossorigin="anonymous"></script>
     <script src="js/accordion.min.js"></script>
     <!-- <script src="js/swiper-bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
     <script src="js/main.min.js"></script>
 </body>
 
