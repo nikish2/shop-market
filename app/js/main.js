@@ -143,7 +143,6 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.brand__partner',
-      markers: true,
       start: 'top botton',
 
     },
@@ -161,7 +160,6 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.anim1',
-      markers: true,
       start: 'top top',
 
     },
@@ -179,7 +177,6 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.anim2',
-      markers: true,
       start: 'top top',
 
     },
@@ -189,7 +186,6 @@ gsap.fromTo(
     ease: "none"
   });
 
-
 gsap.fromTo(
   ".ideas__img-inner",
   {
@@ -198,7 +194,6 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.anim3',
-      markers: true,
       start: 'bottom top',
     },
     scale: 1,
@@ -216,7 +211,6 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.templates__block_image-two',
-      markers: true,
       start: 'center top',
     },
     y: 0,
@@ -224,7 +218,6 @@ gsap.fromTo(
     duration: 2.5,
     ease: "power3.out"
   });
-
 
 gsap.fromTo(
   ".tee-space__booking",
@@ -234,7 +227,6 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.tee-space__list-item_anim-botton',
-      markers: true,
       start: 'top top',
     },
     scale: 1,
@@ -251,7 +243,6 @@ gsap.fromTo(
     {
       scrollTrigger: {
         trigger: '.movement',
-        markers: true,
         start: 'top top',
       },
       yPercent: 0,
