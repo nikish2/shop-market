@@ -149,7 +149,6 @@ if (laptopScreen.matches) {
     {
       scrollTrigger: {
         trigger: '.create__description',
-        markers: true,
         start: 'top center ',
 
       },
@@ -168,7 +167,6 @@ if (laptopScreen.matches) {
     {
       scrollTrigger: {
         trigger: '.anim1',
-        markers: true,
         start: 'center center',
 
       },
@@ -186,7 +184,6 @@ if (laptopScreen.matches) {
     {
       scrollTrigger: {
         trigger: '.anim2',
-        markers: true,
         start: 'center center',
 
       },
@@ -195,47 +192,45 @@ if (laptopScreen.matches) {
       xPercent: 0,
       ease: "none"
     });
-    // templates-section
-    
-    gsap.fromTo(
-      ".templates__block_image-one",
-      {
-        opacity: 0,
-        yPercent: 50,
-      },
-      {
-        scrollTrigger: {
-          trigger: '.swiper-wrapper',
-          markers: true,
-          start: 'center center',
-  
-        },
-        duration: 1.5,
-        opacity: 1,
-        yPercent: 0,
-        ease: "none",
-        delay: 1
-      });
+  // templates-section
 
-      gsap.fromTo(
-        ".templates__block_image-two",
-        {
-          opacity: 0,
-          yPercent: -50,
-        },
-        {
-          scrollTrigger: {
-            trigger: '.swiper-wrapper',
-            markers: true,
-            start: 'center center',
-    
-          },
-          duration: 1.5,
-          opacity: 1,
-          yPercent: 0,
-          ease: "none",
-          delay: 1
-        });
+  gsap.fromTo(
+    ".templates__block_image-one",
+    {
+      opacity: 0,
+      yPercent: 50,
+    },
+    {
+      scrollTrigger: {
+        trigger: '.swiper-wrapper',
+        start: 'center center',
+
+      },
+      duration: 1.5,
+      opacity: 1,
+      yPercent: 0,
+      ease: "none",
+      delay: 1
+    });
+
+  gsap.fromTo(
+    ".templates__block_image-two",
+    {
+      opacity: 0,
+      yPercent: -50,
+    },
+    {
+      scrollTrigger: {
+        trigger: '.swiper-wrapper',
+        start: 'center center',
+
+      },
+      duration: 1.5,
+      opacity: 1,
+      yPercent: 0,
+      ease: "none",
+      delay: 1
+    });
   // tee-space-section
 
   gsap.fromTo(
@@ -247,7 +242,6 @@ if (laptopScreen.matches) {
     {
       scrollTrigger: {
         trigger: '.templates__container',
-        markers: true,
         start: 'center center',
       },
       y: 0,
@@ -265,7 +259,6 @@ if (laptopScreen.matches) {
     {
       scrollTrigger: {
         trigger: '.tee-space__list-item_anim-botton',
-        markers: true,
         start: 'top center',
       },
       scale: 1,
@@ -283,7 +276,6 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.anim3',
-      markers: true,
       start: 'bottom center',
     },
     scale: 1,
@@ -303,7 +295,6 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.user-comments',
-      markers: true,
       start: 'bottom center',
     },
     opacity: 1,
@@ -322,7 +313,6 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.user-comments',
-      markers: true,
       start: 'bottom center',
     },
     opacity: 1,
@@ -343,7 +333,6 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.movement',
-      markers: true,
       start: 'center center',
     },
     yPercent: 0,
@@ -351,7 +340,6 @@ gsap.fromTo(
     duration: 1.5,
     stagger: 0.3
   });
-
 
 
 
