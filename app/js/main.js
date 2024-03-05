@@ -134,58 +134,147 @@ let swiperTwo = new Swiper(".mySwiper-two", {
 // );
 gsap.registerPlugin(ScrollTrigger)
 
-gsap.fromTo(
-  ".anim1",
-  {
-    opacity: 0,
-    xPercent: 50,
-  },
-  {
-    scrollTrigger: {
-      trigger: '.brand__partner',
-      start: 'top botton',
+const laptopScreen = window.matchMedia('(min-width:767px)');
 
+if (laptopScreen.matches) {
+
+  // create-section
+
+  gsap.fromTo(
+    ".anim1",
+    {
+      opacity: 0,
+      xPercent: 50,
     },
-    duration: 1.5,
-    opacity: 1,
-    xPercent: 0,
-    ease: "none"
-  });
-gsap.fromTo(
-  ".anim2",
-  {
-    opacity: 0,
-    xPercent: -50,
-  },
-  {
-    scrollTrigger: {
-      trigger: '.anim1',
-      start: 'top top',
+    {
+      scrollTrigger: {
+        trigger: '.create__description',
+        markers: true,
+        start: 'top center ',
 
+      },
+      duration: 1.5,
+      opacity: 1,
+      xPercent: 0,
+      ease: "none"
+    });
+
+  gsap.fromTo(
+    ".anim2",
+    {
+      opacity: 0,
+      xPercent: -50,
     },
-    duration: 1.5,
-    opacity: 1,
-    xPercent: 0,
-    ease: "none"
-  });
-gsap.fromTo(
-  ".anim3",
-  {
-    opacity: 0,
-    xPercent: 50,
-  },
-  {
-    scrollTrigger: {
-      trigger: '.anim2',
-      start: 'top top',
+    {
+      scrollTrigger: {
+        trigger: '.anim1',
+        markers: true,
+        start: 'center center',
 
+      },
+      duration: 1.5,
+      opacity: 1,
+      xPercent: 0,
+      ease: "none"
+    });
+  gsap.fromTo(
+    ".anim3",
+    {
+      opacity: 0,
+      xPercent: 50,
     },
-    duration: 1.5,
-    opacity: 1,
-    xPercent: 0,
-    ease: "none"
-  });
+    {
+      scrollTrigger: {
+        trigger: '.anim2',
+        markers: true,
+        start: 'center center',
 
+      },
+      duration: 1.5,
+      opacity: 1,
+      xPercent: 0,
+      ease: "none"
+    });
+    // templates-section
+    
+    gsap.fromTo(
+      ".templates__block_image-one",
+      {
+        opacity: 0,
+        yPercent: 50,
+      },
+      {
+        scrollTrigger: {
+          trigger: '.swiper-wrapper',
+          markers: true,
+          start: 'center center',
+  
+        },
+        duration: 1.5,
+        opacity: 1,
+        yPercent: 0,
+        ease: "none",
+        delay: 1
+      });
+
+      gsap.fromTo(
+        ".templates__block_image-two",
+        {
+          opacity: 0,
+          yPercent: -50,
+        },
+        {
+          scrollTrigger: {
+            trigger: '.swiper-wrapper',
+            markers: true,
+            start: 'center center',
+    
+          },
+          duration: 1.5,
+          opacity: 1,
+          yPercent: 0,
+          ease: "none",
+          delay: 1
+        });
+  // tee-space-section
+
+  gsap.fromTo(
+    ".tee-space__list-item_anim",
+    {
+      y: 100,
+      opacity: 0
+    },
+    {
+      scrollTrigger: {
+        trigger: '.templates__container',
+        markers: true,
+        start: 'center center',
+      },
+      y: 0,
+      opacity: 1,
+      duration: 2.5,
+      ease: "power3.out",
+      delay: 1
+    });
+
+  gsap.fromTo(
+    ".tee-space__booking",
+    {
+      scale: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: '.tee-space__list-item_anim-botton',
+        markers: true,
+        start: 'top center',
+      },
+      scale: 1,
+      duration: 3,
+      ease: "power3.out"
+    });
+}
+
+// ideas-section
 gsap.fromTo(
   ".ideas__img-inner",
   {
@@ -194,7 +283,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: '.anim3',
-      start: 'bottom top',
+      markers: true,
+      start: 'bottom center',
     },
     scale: 1,
     duration: 2,
@@ -202,51 +292,72 @@ gsap.fromTo(
     ease: "power3.out"
   });
 
+// movement-section
+
 gsap.fromTo(
-  ".tee-space__list-item_anim",
+  ".movement__img-inner-anim-left",
   {
-    y: 100,
-    opacity: 0
+    opacity: 0,
+    xPercent: -100
   },
   {
     scrollTrigger: {
-      trigger: '.templates__block_image-two',
-      start: 'center top',
+      trigger: '.user-comments',
+      markers: true,
+      start: 'bottom center',
     },
-    y: 0,
     opacity: 1,
-    duration: 2.5,
+    xPercent: 0,
+    duration: 2,
+    rotation: 360,
     ease: "power3.out"
   });
 
 gsap.fromTo(
-  ".tee-space__booking",
+  ".movement__img-inner-anim-right",
   {
-    scale: 0,
+    opacity: 0,
+    xPercent: 100
   },
   {
     scrollTrigger: {
-      trigger: '.tee-space__list-item_anim-botton',
-      start: 'top top',
+      trigger: '.user-comments',
+      markers: true,
+      start: 'bottom center',
     },
-    scale: 1,
-    duration: 3,
+    opacity: 1,
+    xPercent: 0,
+    duration: 2,
+    rotation: 360,
     ease: "power3.out"
   });
 
-  gsap.fromTo(
-    ".social__link",
-    {
-      opacity: 0,
-      yPercent: -100,
+// social-section
+
+gsap.fromTo(
+  ".social__link",
+  {
+    opacity: 0,
+    yPercent: -100,
+  },
+  {
+    scrollTrigger: {
+      trigger: '.movement',
+      markers: true,
+      start: 'center center',
     },
-    {
-      scrollTrigger: {
-        trigger: '.movement',
-        start: 'top top',
-      },
-      yPercent: 0,
-      opacity: 1,
-      duration: 1.5,
-      stagger: 0.3
-    });
+    yPercent: 0,
+    opacity: 1,
+    duration: 1.5,
+    stagger: 0.3
+  });
+
+
+
+
+
+
+
+
+
+

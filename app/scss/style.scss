@@ -51,6 +51,8 @@ html {
         border-radius: 7px;
         padding: 0;
 
+        @keyframes circle-infinit {}
+
 
         a {
             display: inline-block;
@@ -63,6 +65,7 @@ html {
         max-width: $width-max;
         width: 100%;
         margin: auto;
+        border-radius: 10px;
     }
 
     &__content {
@@ -191,8 +194,9 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
+
         &::before,
-        &::after{
+        &::after {
             position: absolute;
             content: "";
             width: 1px;
@@ -201,7 +205,8 @@ html {
             transform: rotate(315deg);
 
         }
-        &::after{
+
+        &::after {
             transform: rotate(-315deg);
         }
     }
@@ -1070,6 +1075,24 @@ html {
 }
 
 .user-comments {
+    background: linear-gradient(45deg, rgb(192, 245, 207) 6.75%, rgb(255, 255, 255) 75%);
+    overflow: hidden;
+    background-size: 200% 200%;
+    animation: gradient 7s ease infinite;
+
+    @keyframes gradient {
+        0% {
+            background-position: 0 50%;
+        }
+
+        50% {
+            background-position: 70% 50%;
+        }
+
+        100% {
+            background-position: 0 50%;
+        }
+    }
 
     &__block {
         display: flex;
@@ -1113,11 +1136,20 @@ html {
 
     &__inner {
         display: flex;
+
+        &_gap {
+            &>p {
+              
+                &:last-child{
+                    margin: 11px 25px 0 0;
+                }
+            }
+        }
     }
 }
 
 .mySwiper-two {
-    margin: 69px 0 100px 0;
+    margin-top: 69px;
 }
 
 .swiper-wrapper {
@@ -1128,12 +1160,12 @@ html {
 }
 
 .swiper-slide_two {
-    padding-bottom: 80px;
+    margin-bottom: 80px;
+    border-radius: 10px;
 }
 
 .swiper-user-card {
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
     padding: 49px 60px 46px 40px;
     margin: 5px;
 
@@ -1157,6 +1189,8 @@ html {
     position: relative;
     background-color: rgba(180, 121, 217, 0.15);
     overflow: hidden;
+    margin-top: 100px;
+
 
     &__img-inner {
         position: absolute;
@@ -1199,7 +1233,6 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-
 
         h2 {
             @include big-title;
