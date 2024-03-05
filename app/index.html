@@ -12,13 +12,60 @@
 
     <style>
         .templates__block_image-one {
-            background-image: url('./images/dist/style1.jpg');
-            background-image: -webkit-image-set(url('./images/dist/style1.webp'), url('./images/dist/style1.jpg'));
-            background-image: -ms-image-set(url('./images/dist/style1.webp'), url('./images/dist/style1.jpg'));
-            background-image: image-set(url('./images/dist/style1.webp') 1x, url('./images/dist/style1.jpg') 2x);
+            background-image: url("./images/dist/style1.jpg");
+
+            /* Для Chrome и Safari */
+            background-image: -webkit-image-set (url("./images/dist/style1x2.jpg") 2x,
+                    url("./images/dist/style1.jpg") 1x,
+                    url("./images/dist/style1x2.webp") 2x,
+                    url("./images/dist/style1.webp") 1x);
+
+
+            /* Для Firefox */
+            background-image: image-set(
+                    url("./images/dist/style1x2.webp") type("image/webp") 2x,
+                    url("./images/dist/style1.webp") type("image/webp") 1x,
+                    url("./images/dist/style1x2.jpg") 2x,
+                    url("./images/dist/style1.jpg") 1x);
         }
 
         .templates__block_image-two {
+            background-image: url("./images/dist/style2.jpg");
+
+            /* Для Chrome и Safari */
+            background-image: -webkit-image-set (url("./images/dist/style2x2.jpg") 2x,
+                    url("./images/dist/style2.jpg") 1x,
+                    url("./images/dist/style2x2.webp") 2x,
+                    url("./images/dist/style2.webp") 1x);
+
+
+            /* Для Firefox */
+            background-image: image-set(
+                    url("./images/dist/style2x2.webp") type("image/webp") 2x,
+                    url("./images/dist/style2.webp") type("image/webp") 1x,
+                    url("./images/dist/style2x2.jpg") 2x,
+                    url("./images/dist/style2.jpg") 1x);
+        }
+
+        .tee-space__booking {
+            background-image: url("./images/dist/banner-costom.jpg");
+
+            /* Для Chrome и Safari */
+            background-image: -webkit-image-set (url("./images/dist/banner-costom2x.jpg") 2x,
+                    url("./images/dist/banner-costom.jpg") 1x,
+                    url("./images/dist/banner-costom2x.webp") 2x,
+                    url("./images/dist/banner-costom.webp") 1x);
+
+
+            /* Для Firefox */
+            background-image: image-set(
+                    url("./images/dist/banner-costom2x.webp") type("image/webp") 2x,
+                    url("./images/dist/banner-costom.webp") type("image/webp") 1x,
+                    url("./images/dist/banner-costom2x.jpg") 2x,
+                    url("./images/dist/banner-costom.jpg") 1x);
+        }
+
+        /* .templates__block_image-two {
             background-image: url('./images/dist/style2.jpg');
             background-image: -webkit-image-set(url('./images/dist/style2.webp'), url('./images/dist/style2.jpg'));
             background-image: -ms-image-set(url('./images/dist/style2.webp'), url('./images/dist/style2.jpg'));
@@ -30,7 +77,7 @@
             background-image: -webkit-image-set(url('./images/dist/banner-costom.webp'), url('./images/dist/banner-costom.jpg'));
             background-image: -ms-image-set(url('./images/dist/banner-costom.webp'), url('./images/dist/banner-costom.jpg'));
             background-image: image-set(url('./images/dist/banner-costom.webp') 1x, url('./images/dist/banner-costom.jpg') 2x);
-        }
+        } */
     </style>
 
     <style>
@@ -362,7 +409,7 @@
                         <img src="./images/dist/miniature.png" alt="hopin">
                     </picture>
                 </div>
-                
+
                 <div class="ideas__inner">
                     <h2>
                         Free and easy way to
@@ -458,8 +505,10 @@
                         <div class="swiper-slide">
                             <div class="swiper-container-card">
                                 <picture>
-                                    <source srcset="./images/dist/child2.webp" type="image/webp">
-                                    <img src="./images/dist/child2.jpg" alt="child T-shirts">
+                                    <source srcset="./images/dist/child2.webp 1x, ./images/dist/cgild2x.webp 2x"
+                                        type="image/webp">
+                                    <img src="./images/dist/child2.jpg 1x, ./images/dist/cgild2x.jpg 2x"
+                                        alt="child T-shirts">
                                 </picture>
                                 <div class="swiper-desc">
                                     <h4>Youth Short Sleeve Tee</h4>
@@ -608,7 +657,7 @@
                         <!-- =================================================================================================== -->
                     </div>
                     <div class="tee-space__block-card">
-                       
+
                         <ul class="tee-space__list">
                             <li class="tee-space__list-item tee-space__list-item_anim">
                                 <img src="./images/dist/Vector-card.svg" alt="icon-dollar">
@@ -1038,7 +1087,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    
+
     <script src="js/main.min.js"></script>
 </body>
 
