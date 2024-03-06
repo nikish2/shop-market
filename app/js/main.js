@@ -1,3 +1,5 @@
+"use strict"
+
 const menu = document.querySelector('.menu');
 const burger = document.querySelector('.header__burger');
 const burgerContent = document.querySelector('.header__content');
@@ -77,61 +79,76 @@ let swiperTwo = new Swiper(".mySwiper-two", {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('form');
+  form.addEventListener('submit', formSend);
 
-// window.addEventListener('scroll', animOnScroll);
-// if (animItems.length > 0) {
-//   function animOnScroll() {
-//     for (let index = 0; index < animItems.length; index++) {
-//       const animItem = animItems[index];
-//       const animItemHeight = animItem.offsetHeight;
-//       const animItemOffset = offset(animItem).top;
-//       const animStart = 4;
+  async function formSend(e) {
+    e.preventDefault();
 
-//       let animItemPoint = window.innerHeight - animItemHeight / animStart;
-//       if (animItemHeight > window.innerHeight) {
-//         animItemPoint = window.innerHeight - window.innerHeight / animStart;
-//       }
+    let error = formValidate(form);
 
-//       if((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
-//         animItem.classList.add('_active');
-//       } else {
-//         animItem.classList.remove('_active');
-//       }
+    let formData = new FormData(form);
 
-//     }
-//   }
-//   function offset(el) {
-//     const rect = el.getBoundingClientRect(),
-//       scrollLeft = window.scrollX || document.documentElement.scrollLeft,
-//       scrollTop = window.scrollY || document.documentElement.scrollTop;
-//     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-//   }
-// }
+    if (error === 0) {
+      form.classList.add('_sending'); 
+      let response = await fetch('sendmail.php', {
+        method: 'POST',
+        body: formData
+      });
+      if (response.ok) {
+        let result = await response.json();
+        alert(result.message);
+        form.reset();
+        form.classList.remove('_sending');
+      } else {
+        alert('Ошибка');
+        form.classList.remove('_sending');
+      }
+    } else {
+      alert('Заполните обязательные поля');
+    }
+  }
+
+  function formValidate(form) {
+    let error = 0;
+    let formReq = document.querySelectorAll('._req');
+
+    for (let index = 0; index < formReq.length; index++) {
+      const input = formReq[index];
+      formRemoveError(input);
+
+      if (input.classList.contains('_email')) {
+        if (emailTest(input)) {
+          formAddError(input);
+          error++;
+        }
+      } else {
+        if (input.value === '') {
+          formAddError(input);
+          error++;
+        }
+      }
+    }
+  }
+
+  function formAddError(input) {
+    // input.parentElement.classList.add('_error'); добавляет класс и к родительскому эллементу input в моем случае к form
+    input.classList.add('_error');
+  }
+  function formRemoveError(input) {
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+  }
+  // Функция теста email
+  function emailTest(input) {
+    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+  }
+});
 
 
 
-// gsap.to(".brand__partner", {
-//   scrollTrigger: ".brand__partner",
-//   opacity: 1,
-//   x: 0,
-//   duration: 0.5
-// });
 
-
-// gsap.fromTo(
-//   ".brand__partner",
-//   {
-//     opacity: 0,
-//     x: "-100%",
-//   },
-//   {
-//     scrollTrigger: ".anim-items",
-//     duration: 1,
-//     opacity: 1,
-//     x: 0,
-//     ease: "none"
-//   }
-// );
 gsap.registerPlugin(ScrollTrigger)
 
 const laptopScreen = window.matchMedia('(min-width:767px)');
