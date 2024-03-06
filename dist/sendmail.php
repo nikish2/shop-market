@@ -2,8 +2,11 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'dist/phpmailer/src/Exception.php';
 require 'dist/phpmailer/src/PHPMailer.php';
+require 'dist/phpmailer/src/Exception.php';
+
+
+require 'vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 $mail->CharSet = 'UTF-8';
@@ -34,4 +37,5 @@ $response = ['message' => $message];
 
 header('Content-type: application/json');
 echo json_encode($response);
-?>
+
+

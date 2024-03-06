@@ -5,6 +5,9 @@ use PHPMailer\PHPMailer\Exception;
 require 'dist/phpmailer/src/Exception.php';
 require 'dist/phpmailer/src/PHPMailer.php';
 
+
+require 'vendor/autoload.php';
+
 $mail = new PHPMailer(true);
 $mail->CharSet = 'UTF-8';
 $mail->setLanguage('ru', 'phpmailer/language/');
@@ -34,4 +37,4 @@ $response = ['message' => $message];
 
 header('Content-type: application/json');
 echo json_encode($response);
-?>
+

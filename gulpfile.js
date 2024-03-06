@@ -98,7 +98,7 @@ function building() {
         'app/js/main.min.js',
         'app/js/accordion.min.js',
         'app/js/swiper-bundle.min.js',
-        'app/phpmailer/*.*',
+        'app/phpmailer/**/*',
         'app/**/sendmail.php',
         'app/**/*.html'],
         { base: 'app' })
