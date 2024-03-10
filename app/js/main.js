@@ -1,5 +1,6 @@
 "use strict"
 
+// меню бургер
 const menu = document.querySelector('.menu');
 const burger = document.querySelector('.header__burger');
 const burgerContent = document.querySelector('.header__content');
@@ -14,9 +15,11 @@ if (menu && burger && burgerContent && hiddenSectionTwo) {
   })
 }
 
+// меню аккардион
 new Accordion('.accordion-container');
 
 
+// поиск товаров
 const icon = document.querySelector('.search__icon');
 const search = document.querySelector('.search');
 const clear = document.querySelector('.search__clear');
@@ -31,7 +34,7 @@ if (icon && search && clear && clearSearch) {
   })
 }
 
-
+// свайвер
 let swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -79,76 +82,48 @@ let swiperTwo = new Swiper(".mySwiper-two", {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('form');
-  form.addEventListener('submit', formSend);
 
-  async function formSend(e) {
-    e.preventDefault();
+// отправка почты
+let validation = new JustValidate("form")
 
-    let error = formValidate(form);
-
-    let formData = new FormData(form);
-
-    if (error === 0) {
-      form.classList.add('_sending'); 
-      let response = await fetch('sendmail.php', {
-        method: 'POST',
-        body: formData
-      });
-      if (response.ok) {
-        let result = await response.json();
-        alert(result.message);
-        form.reset();
-        form.classList.remove('_sending');
-      } else {
-        alert('Ошибка');
-        form.classList.remove('_sending');
-      }
-    } else {
-      alert('Заполните обязательные поля');
-    }
+validation.addField("#email", [
+  {
+    rule: "required",
+    errorMessage: "Введите почту"
+  },
+  {
+    rule: "minLength",
+    value: 5,
+    errorMessage: "Минимум 5 символов"
+  },
+  {
+    rule: 'email',
+    errorMessage: "Введите адрес почты"
   }
+])
+.onSuccess(async function () {
+ let data = {
+  email: document.getElementById("email").value
+ }
 
-  function formValidate(form) {
-    let error = 0;
-    let formReq = document.querySelectorAll('._req');
-
-    for (let index = 0; index < formReq.length; index++) {
-      const input = formReq[index];
-      formRemoveError(input);
-
-      if (input.classList.contains('_email')) {
-        if (emailTest(input)) {
-          formAddError(input);
-          error++;
-        }
-      } else {
-        if (input.value === '') {
-          formAddError(input);
-          error++;
-        }
-      }
-    }
+ let response = await fetch("mail.php", {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: {
+    "Content-Type": "application/json; charset=UTF-8"
   }
+ }) 
 
-  function formAddError(input) {
-    // input.parentElement.classList.add('_error'); добавляет класс и к родительскому эллементу input в моем случае к form
-    input.classList.add('_error');
-  }
-  function formRemoveError(input) {
-    input.parentElement.classList.remove('_error');
-    input.classList.remove('_error');
-  }
-  // Функция теста email
-  function emailTest(input) {
-    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-  }
-});
+ let result = await response.text()
+
+ alert(result)
+})
 
 
 
 
+
+//анимации
 gsap.registerPlugin(ScrollTrigger)
 
 const laptopScreen = window.matchMedia('(min-width:767px)');
