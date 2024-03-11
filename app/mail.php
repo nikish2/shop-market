@@ -11,8 +11,10 @@ $data = json_decode($json, true); // Преобразование json
 // Данные
 $email = $data['email'];
 
-$title = 'Заявка с сайта'; // Название письма
-$body = '<p>Почта: <strong>'.$email.'</strong></p>';
+// Контент письма
+$title = 'Заявка с сайта testhostwork.ru'; // Название письма
+$body = '<p>Заявка на рассылку</p>'.
+        '<p>Почта: <strong>'.$email.'</strong></p>';
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
