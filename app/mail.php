@@ -25,7 +25,7 @@ try {
   // Настройки почты отправителя
   $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
   $mail->Username   = 'rashkevich2001@mail.ru'; // Логин на почте
-  $mail->Password   = 'CKK1CPahXLsM6bATAsb0'; // Пароль на почте
+  $mail->Password   = 'deBJmZZmqvH7wkz9sM5T'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 

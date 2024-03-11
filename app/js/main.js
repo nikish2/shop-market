@@ -123,6 +123,7 @@ validation.addField("#email", [
 
 
 
+
 //анимации
 gsap.registerPlugin(ScrollTrigger)
 
